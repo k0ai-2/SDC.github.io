@@ -394,7 +394,8 @@ footer{display:flex;align-items:center;justify-content:space-between;max-width:1
 .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.5);cursor:pointer;transition:background 0.2s;}
 .dot.active{background:#ffffff;}
 
-  .hero-logo{display:block;animation:spinSdclogow 6s linear infinite;}@keyframes spinSdclogow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+  .hero-drum{perspective:600px;}
+  .hero-logo{display:block;animation:spinSdclogow 6s linear infinite;transform-style:preserve-3d;}@keyframes spinSdclogow{from{transform:rotateY(0deg)}to{transform:rotateY(360deg)}}
   .faq-section{padding:6rem 2rem;background:var(--black2);}
   .faq-inner{max-width:800px;margin:0 auto;}
   .faq-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);letter-spacing:0.06em;margin-bottom:0.5rem;}
@@ -485,10 +486,8 @@ function closeMenu(){
       <p data-i18n-html="teamP1">Serdang Drum Community, based in Selangor, is one of Malaysia's 24 Festive Drums teams. It was founded by a group of passionate alumni from SMK Seri Kembangan who share a deep love for the art of drumming. Our members come from diverse backgrounds—students, teachers, pharmacists, engineers, agency professionals, makeup artists, and entrepreneurs. Although we play different roles in our careers, we hold equally important responsibilities within the team.</p>
       <p data-i18n="teamP2">Since our establishment, we have used the sound of the drums to promote unity and the rhythm to strengthen our community. The team has completed more than 50 performances in school and over 30 external shows, including concerts, commercial events, charity events, and community celebrations. In 2018 and 2023, we successfully held two major productions—Our Drum Stories and Our Drum Story 2—both receiving overwhelming support with full-house audiences. We are now actively preparing for Our Drum Story 3 in 2027.</p>
       <aside class="drum-names" aria-label="Names for the drum tradition">
-        <h3>The Drum Tradition We Perform</h3>
-        <p lang="en"><strong>24 Festive Drums</strong> — the English name for our Malaysian Chinese drum performance tradition.</p>
-        <p lang="ms"><strong>Gendang 24 Perayaan</strong> — nama Bahasa Melayu untuk persembahan dram tradisional kami.</p>
-        <p lang="zh"><strong>二十四节令鼓</strong> — 我们所表演的马来西亚华人传统鼓艺。</p>
+        <h3 data-i18n="drumTraditionTitle">The Drum Tradition We Perform</h3>
+        <p data-i18n-html="drumTraditionDesc"><strong>24 Festive Drums</strong> — the English name for our Malaysian Chinese drum performance tradition.</p>
       </aside>
     </div>
   </div>
@@ -731,21 +730,21 @@ function closeMenu(){
 <!-- FAQ: visible answers support search and answer engines -->
 <section class="faq-section" id="faq" aria-labelledby="faq-heading">
   <div class="faq-inner">
-    <p class="section-label">Booking FAQ</p>
-    <h2 class="faq-title" id="faq-heading">FREQUENTLY ASKED <span>QUESTIONS</span></h2>
-    <p class="faq-sub">Quick answers about Serdang Drum Club performances and bookings.</p>
+    <p class="section-label" data-i18n="faqLabel">Booking FAQ</p>
+    <h2 class="faq-title" id="faq-heading" data-i18n-html="faqTitle">FREQUENTLY ASKED <span>QUESTIONS</span></h2>
+    <p class="faq-sub" data-i18n="faqSub">Quick answers about Serdang Drum Club performances and bookings.</p>
     <div class="faq-list">
       <article class="faq-item">
-        <h3 class="faq-question">What does Serdang Drum Club perform?</h3>
-        <p class="faq-answer">Serdang Drum Club performs high-energy 24 Festive Drums shows for corporate events, festivals, cultural celebrations, weddings, schools, and private functions.</p>
+        <h3 class="faq-question" data-i18n="faqQ1">What does Serdang Drum Club perform?</h3>
+        <p class="faq-answer" data-i18n="faqA1">Serdang Drum Club performs high-energy 24 Festive Drums shows for corporate events, festivals, cultural celebrations, weddings, schools, and private functions.</p>
       </article>
       <article class="faq-item">
-        <h3 class="faq-question">Where is Serdang Drum Club based?</h3>
-        <p class="faq-answer">We are based in Serdang, Selangor, Malaysia and are available for performances across Malaysia.</p>
+        <h3 class="faq-question" data-i18n="faqQ2">Where is Serdang Drum Club based?</h3>
+        <p class="faq-answer" data-i18n="faqA2">We are based in Serdang, Selangor, Malaysia and are available for performances across Malaysia.</p>
       </article>
       <article class="faq-item">
-        <h3 class="faq-question">How can I book Serdang Drum Club?</h3>
-        <p class="faq-answer">For bookings and enquiries, contact us on WhatsApp at <a href="https://wa.me/60169659191" target="_blank">+60 16 965 9191</a> or through Instagram at <a href="https://www.instagram.com/ourdrumstory/" target="_blank">@ourdrumstory</a>.</p>
+        <h3 class="faq-question" data-i18n="faqQ3">How can I book Serdang Drum Club?</h3>
+        <p class="faq-answer" data-i18n-html="faqA3">For bookings and enquiries, contact us on WhatsApp at <a href="https://wa.me/60169659191" target="_blank">+60 16 965 9191</a> or through Instagram at <a href="https://www.instagram.com/ourdrumstory/" target="_blank">@ourdrumstory</a>.</p>
       </article>
     </div>
   </div>
@@ -841,6 +840,11 @@ const translations = {
   }
 };
 Object.assign(translations.en, {
+  drumTraditionTitle: 'The Drum Tradition We Perform', drumTraditionDesc: '<strong>24 Festive Drums</strong> — the English name for our Malaysian Chinese drum performance tradition.',
+  faqLabel: 'Booking FAQ', faqTitle: 'FREQUENTLY ASKED <span>QUESTIONS</span>', faqSub: 'Quick answers about Serdang Drum Club performances and bookings.',
+  faqQ1: 'What does Serdang Drum Club perform?', faqA1: 'Serdang Drum Club performs high-energy 24 Festive Drums shows for corporate events, festivals, cultural celebrations, weddings, schools, and private functions.',
+  faqQ2: 'Where is Serdang Drum Club based?', faqA2: 'We are based in Serdang, Selangor, Malaysia and are available for performances across Malaysia.',
+  faqQ3: 'How can I book Serdang Drum Club?', faqA3: 'For bookings and enquiries, contact us on WhatsApp at <a href="https://wa.me/60169659191" target="_blank">+60 16 965 9191</a> or through Instagram at <a href="https://www.instagram.com/ourdrumstory/" target="_blank">@ourdrumstory</a>.',
   navUpcoming: 'Upcoming', upcomingLabel: 'What\'s Next', upcomingActivitiesTitle: 'UPCOMING <span>ACTIVITIES</span>', upcomingActivitiesSub: 'Mark your calendar - here\'s what\'s coming up next.',
   merdekaName: 'Merdeka', merdekaShortDate: '31 AUG', merdekaDate: '31 August 2026', merdekaDesc: 'Join us as we celebrate Merdeka with a spirited drum performance honoring Malaysia\'s independence.',
   aseanName: 'ASEAN', aseanDate: '26 October 2025', vietnamName: 'VIETNAM GONG', vietnamDate: '17-21 December 2025',
@@ -851,6 +855,11 @@ Object.assign(translations.en, {
 });
 
 Object.assign(translations.ms, {
+  drumTraditionTitle: 'Tradisi Dram Yang Kami Persembahkan', drumTraditionDesc: '<strong>Gendang 24 Perayaan</strong> — nama Bahasa Melayu untuk tradisi persembahan dram Cina Malaysia kami.',
+  faqLabel: 'Soalan Lazim Tempahan', faqTitle: 'SOALAN <span>LAZIM</span>', faqSub: 'Jawapan ringkas tentang persembahan dan tempahan Serdang Drum Club.',
+  faqQ1: 'Apakah persembahan Serdang Drum Club?', faqA1: 'Serdang Drum Club mempersembahkan pertunjukan Gendang 24 Perayaan yang bertenaga untuk acara korporat, festival, sambutan budaya, majlis perkahwinan, sekolah dan acara persendirian.',
+  faqQ2: 'Di manakah Serdang Drum Club berpangkalan?', faqA2: 'Kami berpangkalan di Serdang, Selangor, Malaysia dan tersedia untuk persembahan di seluruh Malaysia.',
+  faqQ3: 'Bagaimanakah saya boleh menempah Serdang Drum Club?', faqA3: 'Untuk tempahan dan pertanyaan, hubungi kami melalui WhatsApp di <a href="https://wa.me/60169659191" target="_blank">+60 16 965 9191</a> atau Instagram di <a href="https://www.instagram.com/ourdrumstory/" target="_blank">@ourdrumstory</a>.',
   navUpcoming: 'Akan Datang', upcomingLabel: 'Seterusnya', upcomingActivitiesTitle: 'AKTIVITI <span>AKAN DATANG</span>', upcomingActivitiesSub: 'Tandakan kalendar anda — inilah aktiviti yang akan datang.',
   merdekaName: 'Merdeka', merdekaShortDate: '31 OGOS', merdekaDate: '31 Ogos 2026', merdekaDesc: 'Sertai kami meraikan Merdeka dengan persembahan dram penuh semangat bagi menghormati kemerdekaan Malaysia.',
   aseanName: 'ASEAN', aseanDate: '26 Oktober 2025', vietnamName: 'GONG VIETNAM', vietnamDate: '17–21 Disember 2025',
@@ -861,6 +870,11 @@ Object.assign(translations.ms, {
 });
 
 Object.assign(translations.zh, {
+  drumTraditionTitle: '我们表演的鼓艺传统', drumTraditionDesc: '<strong>二十四节令鼓</strong>——我们所表演的马来西亚华人传统鼓艺。',
+  faqLabel: '预约常见问题', faqTitle: '常见<span>问题</span>', faqSub: '关于 Serdang Drum Club 演出与预约的快速解答。',
+  faqQ1: 'Serdang Drum Club 表演什么？', faqA1: 'Serdang Drum Club 为企业活动、节庆、文化庆典、婚礼、学校和私人活动带来充满活力的二十四节令鼓表演。',
+  faqQ2: 'Serdang Drum Club 位于哪里？', faqA2: '我们位于马来西亚雪兰莪州沙登，并可在全马各地演出。',
+  faqQ3: '如何预约 Serdang Drum Club？', faqA3: '如需预约或查询，请通过 WhatsApp <a href="https://wa.me/60169659191" target="_blank">+60 16 965 9191</a> 或 Instagram <a href="https://www.instagram.com/ourdrumstory/" target="_blank">@ourdrumstory</a> 联系我们。',
   navUpcoming: '即将举行', upcomingLabel: '即将到来', upcomingActivitiesTitle: '即将<span>活动</span>', upcomingActivitiesSub: '记下日期，以下是即将举行的活动。',
   merdekaName: '国庆日', merdekaShortDate: '8月31日', merdekaDate: '2026年8月31日', merdekaDesc: '与我们一起以充满活力的鼓艺表演庆祝马来西亚独立日。',
   aseanName: '东盟', aseanDate: '2025年10月26日', vietnamName: '越南铜锣节', vietnamDate: '2025年12月17日至21日',
