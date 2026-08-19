@@ -290,12 +290,16 @@ textarea.form-input{resize:vertical;min-height:130px;}
 .activity-card-wide.activity-card-wide-reverse{flex-direction:row-reverse;}
 .activity-card-wide .activity-name{font-size:2.2rem;margin-bottom:0.75rem;}
 .activity-card-wide .activity-desc{font-size:0.95rem;display:block;-webkit-line-clamp:unset;overflow:visible;}
+.activity-card-wide .merdeka-photo{aspect-ratio:3/4;width:auto;}
+.activity-card-wide .merdeka-photo .slide img{object-fit:cover;}
 @media(min-width:769px){
   .activity-card-wide .activity-photo{min-height:320px;max-height:480px;}
+  .activity-card-wide .merdeka-photo{min-height:380px;max-height:560px;}
 }
 @media(max-width:768px){
   .activity-card-wide{flex-direction:column;}
   .activity-card-wide .activity-photo{width:100%;aspect-ratio:4/3;height:auto;}
+  .activity-card-wide .merdeka-photo{width:100%;aspect-ratio:3/4;}
   .activity-card-wide.activity-card-wide-reverse{flex-direction:column;}
 }
 @media(max-width:480px){
@@ -488,7 +492,8 @@ function closeMenu(){
       <p data-i18n="teamP2">Since our establishment, we have used the sound of the drums to promote unity and the rhythm to strengthen our community. The team has completed more than 50 performances in school and over 30 external shows, including concerts, commercial events, charity events, and community celebrations. In 2018 and 2023, we successfully held two major productions—Our Drum Stories and Our Drum Story 2—both receiving overwhelming support with full-house audiences. We are now actively preparing for Our Drum Story 3 in 2027.</p>
       <aside class="drum-names" aria-label="Names for the drum tradition">
         <h3 data-i18n="drumTraditionTitle">The Drum Tradition We Perform</h3>
-        <p data-i18n-html="drumTraditionDesc"><strong>24 Festive Drums</strong> — the English name for our Malaysian Chinese drum performance tradition.</p>
+        <p><strong>Gendang 24 Perayaan (Gendang 24 Musim)</strong> — the Malay name for our Malaysian Chinese drum performance tradition.</p>
+        <p><strong>24 Festive Drums (24 Season Drums)</strong> — the English name for the same tradition.</p>
       </aside>
     </div>
   </div>
@@ -503,10 +508,8 @@ function closeMenu(){
     <div class="activities-grid">
 
       <div class="activity-card activity-card-wide">
-         <div class="activity-photo" style="position:relative;overflow:hidden;">
-          <div><img src="photos/merdeka/merdeka2.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.35);" alt="Merdeka Drum Performance">
-          </div>
-          <div style="position:absolute;bottom:0.75rem;right:0.75rem;background:rgba(0,0,0,0.55);color:#ffffff;font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.06em;padding:0.35rem 0.75rem;border-radius:4px;" data-i18n="merdekaShortDate">31 AUG</div>
+         <div class="activity-photo merdeka-photo slideshow" style="position:relative;overflow:hidden;">
+          <div class="slide active"><img src="photos/merdeka/merdekaimg.jpeg" alt="Merdeka Drum Performance"></div>
         </div>
         <div class="activity-body">
           <div class="activity-name" data-i18n="merdekaName">Merdeka</div>
@@ -679,9 +682,11 @@ function closeMenu(){
     <div class="clients-grid">
       <div class="client-card"><div class="client-icon"><img src="photos/logo/asean.webp" alt="ASEAN" style="width:80px;height:60px;object-fit:contain;"></div><div class="client-name">ASEAN Malaysia 2025</div></div>
       <div class="client-card"><div class="client-icon"><img src="photos/logo/generali.webp" alt="Generali" style="width:80px;height:60px;object-fit:contain;"></div><div class="client-name">Generali</div></div>
-      <div class="client-card"><div class="client-icon"><img src="photos/logo/shedelogo.webp" alt="Shede" style="width:80px;height:60px;object-fit:contain;"></div><div class="client-name">Shede</div></div>
+      <div class="client-card"><div class="client-icon"><img src="photos/logo/shedelogo.webp" alt="Shede" style="width:80px;height:60px;object-fit:contain;"></div><div class="client-name">舍得酒业</div></div>
       <div class="client-card"><div class="client-icon"><img src="photos/logo/zorian.webp" alt="Zorian" style="width:80px;height:60px;object-fit:contain;"></div><div class="client-name">Zorian</div></div>
-      <div class="client-card"><div class="client-icon"><img src="photos/logo/shengqi.webp" alt="Shengqi" style="width:80px;height:60px;object-fit:contain;"></div><div class="client-name">Shengqi</div></div>
+      <div class="client-card"><div class="client-icon"><img src="photos/logo/sichuanlogo.webp" alt="Sichuan Airline" style="width:80px;height:60px;object-fit:contain;"></div><div class="client-name">Sichuan Airlines</div></div>
+      <div class="client-card"><div class="client-icon"><img src="photos/logo/kumon.webp" alt="Kumon" style="width:80px;height:60px;object-fit:contain;"></div><div class="client-name">Kumon</div></div>
+      <div class="client-card"><div class="client-icon"><img src="photos/logo/dragon.webp" alt="Dragon" style="width:80px;height:60px;object-fit:contain;"></div><div class="client-name">Dragon Hot Pot</div></div>      
       <div class="client-card client-coming-soon"><div class="client-icon">✨</div><div class="client-name" data-i18n="comingSoon">Coming Soon...</div></div>
     </div>
   </div>
